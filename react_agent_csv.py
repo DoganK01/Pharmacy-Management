@@ -21,6 +21,7 @@ import pandas as pd
 from llama_index.core.query_engine import PandasQueryEngine
 from llama_index.core.agent import ReActAgent
 import csv
+from utils_csv import get_base_name_without_extension, get_file_names_from_csv_folder, get_csv_files, csv_to_dataframe, main
 
 from llama_index.core.tools import FunctionTool
 
@@ -28,6 +29,13 @@ os.environ["OPENAI_API_KEY"] = "X"
 
 Settings.llm = OpenAI(model="gpt-3.5-turbo")
 Settings.embed_model = OpenAIEmbedding(model="text-embedding-3-large")
+
+folder_path = ""
+
+file_names = get_file_names_from_csv_folder(folder_path)
+dataframes = main()
+
+
 
 tools = []
 
