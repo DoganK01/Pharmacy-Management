@@ -12,9 +12,6 @@ from llama_index.llms.openai import OpenAI
 from llama_index.embeddings.openai import OpenAIEmbedding
 from llama_index.core import Settings
 from llama_index.agent.openai import OpenAIAgent
-from llama_index.core import SummaryIndex
-from llama_index.core.node_parser import SentenceSplitter
-from tqdm.notebook import tqdm
 import pickle
 import os
 import pandas as pd
